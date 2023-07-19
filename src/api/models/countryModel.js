@@ -9,13 +9,13 @@ const countrySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    reigon: {
+    region: {
         type: String,
         required: true,
     },
 });
-// add indexing to countryName and Subcontinent so that the search from db is faster
-countrySchema.index({ countryName: 1, subContinent: 1 }, { unique: true });
+// add indexing to countryName and region so that the search from db is faster
+countrySchema.index({ countryName: 1, region: 1 }, { unique: true });
 
 // Create a mongoose model using the schema defined above
 const Country = mongoose.model("Country", countrySchema);
