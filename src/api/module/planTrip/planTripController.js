@@ -6,10 +6,12 @@ const getPlaces = async (req, res) => {
         // Use an External API to fetch the list of countries
         // and send the response back to the client
         const countryData = await getListOfCountries();
-        const data = await response.json();
-        res.status(200).json(data);
+        res.status(200).json(countryData);
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: "Internal Server Error" });
     }
+};
+module.exports = {
+    getPlaces,
 };
