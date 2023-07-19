@@ -8,7 +8,7 @@ require("dotenv").config();
 const middlewares = require("./middlewares");
 const api = require("./api/routes");
 // connect to mongodb
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.MONGO_DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
     });
 });
 
-app.use("/api/", api);
+app.use("/", api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
