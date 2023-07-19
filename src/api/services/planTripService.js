@@ -10,9 +10,9 @@ const getListOfCountries = async () => {
         return [];
     }
 };
-const createTripFromDetails = async (tripDetails) => {
+const createTripFromDetails = async (payload) => {
     try {
-        const { name, email, phoneNumber, ...tripDetails } = tripDetails;
+        const { name, email, phoneNumber, ...tripDetails } = payload;
         // Create a new user with the name, email and phone number
         // Create a new trip with the trip details
         // Send the response back to the client

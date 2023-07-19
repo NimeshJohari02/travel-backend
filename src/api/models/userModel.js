@@ -14,7 +14,7 @@ const userSchema = new Schema({
         trim: true,
         minlength: 3,
     },
-    phoneNumer: {
+    phoneNumber: {
         type: Number,
         required: true,
         trim: true,
