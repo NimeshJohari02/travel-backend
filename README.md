@@ -74,3 +74,14 @@ curl  -X POST \
   "tripStatus" :"Definitely Travelling"
 }'
 ```
+
+```bash
+GET /planTrip/getPlaces
+
+curl -X GET \
+  'http://localhost:3000/planTrip/getPlaces' \
+  --header 'Accept: */*' \
+  --header 'Content-Type: application/json' \
+
+}'
+```
